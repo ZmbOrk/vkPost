@@ -1,32 +1,45 @@
 package ru.netology.domain;
 
-public class Post {
-    private int idPost; //id публикации
-    private int idOwner; //id автора записи (от чьего имени опубликована запись)
-    private int createdBy;// id администратора, который опубликовал запись (для сообществ)
-    private String nameOwner; //имя автора/сообщества
-    private String iconOwnerUrl; //аватар автора/сообщества
-    private String textPost; //текст публикации, включая заголовок
-    private int replyOwnerId; //id владельца записи, в ответ на которую была оставлена текущая
-    private int replyPostId; // id идентификатор записи, в ответ на которую была оставлена текущая
-    private String imagePostUrl; //изображение, gif, видео используемые в публикации
-    private String linkPage; //ссылка для перехода
-    private String postType; //тип записи, может принимать следующие значения: post, copy, reply, postpone, suggest
-    private int signerId; //id автора, если запись была опубликована от имени сообщества и подписана пользователем
-    private int postponedId; //id отложенной записи
-    private String copyright;//источник материала
+import java.util.Date;
 
-    private boolean friendsOnly; //если запись была создана с опцией «Только для друзей»
-    private boolean canComment; //разрешены ли комментарии
-    private boolean canDelete; //разрешено удаление
-    private boolean canEdit; //разрешено редактирование
-    private boolean canComplain; //разрешено "Пожаловаться" на содержание
-    private boolean canBookmarkPost; //разрешено добавление в закладки
-    private boolean isFavorite; //объект добавлен в закладки у текущего пользователя
-    private boolean canPostPin; //разрешено закрепление публикации
-    private boolean isPostPin; // закрепелена запись
-    private boolean canPostUnpin; //разрешено открепление публикации
-    private boolean markedAsAds; //информация о том, содержит ли запись отметку "реклама"
+public class Post {
+    private int idAccountPage;
+    private int idPost;
+    private int idOwner;
+    private int createdBy;
+    private String nameOwner;
+    private String iconOwnerUrl;
+    private Date datePost;
+    private String textPost;
+    private int replyOwnerId;
+    private int replyPostId;
+    private String imagePostUrl;
+    private String linkPage;
+    private String postType;
+    private int signerId;
+    private int postponedId;
+    private String copyright;
+
+    private boolean friendsOnly;
+    private boolean canComment;
+    private boolean canDelete;
+    private boolean canEdit;
+    private boolean canComplain;
+    private boolean canBookmarkPost;
+    private boolean isFavorite;
+    private boolean canPostPin;
+    private boolean isPostPin;
+    private boolean canPostUnpin;
+    private boolean markedAsAds;
+    private Donut donut;
+
+    public int getIdAccountPage() {
+        return idAccountPage;
+    }
+
+    public void setIdAccountPage(int idAccountPage) {
+        this.idAccountPage = idAccountPage;
+    }
 
     public int getIdPost() {
         return idPost;
@@ -60,6 +73,13 @@ public class Post {
         this.iconOwnerUrl = iconOwnerUrl;
     }
 
+    public Date getDatePost() {
+        return datePost;
+    }
+
+    public void setDatePost(Date datePost) {
+        this.datePost = datePost;
+    }
 
     public String getTextPost() {
         return textPost;
@@ -140,7 +160,6 @@ public class Post {
     public void setCanPostUnpin(boolean canPostUnpin) {
         this.canPostUnpin = canPostUnpin;
     }
-
 
     public int getCreatedBy() {
         return createdBy;
@@ -228,6 +247,14 @@ public class Post {
 
     public void setMarkedAsAds(boolean markedAsAds) {
         this.markedAsAds = markedAsAds;
+    }
+
+    public Donut getDonut() {
+        return donut;
+    }
+
+    public void setDonut(Donut donut) {
+        this.donut = donut;
     }
 
 }

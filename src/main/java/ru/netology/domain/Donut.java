@@ -1,11 +1,11 @@
 package ru.netology.domain;
 
-public class AccessDonut {
-    private boolean isDonut; //запись доступна только платным подписчикам Donut
-    private int paidDuration; //время, в течение которого запись будет доступна только платным подписчикам
-    private int placeholder; //заглушка для пользователей, которые не оформили платную подписку
-    private boolean canPublishFreeCopy; //можно ли открыть запись для всех пользователей, а не только для пдатных подписчиков
-    private String editMode; //информация о том, какие значения Donut можно изменить в записи
+public class Donut {
+    private boolean isDonut;
+    private int paidDuration;
+    private int placeholder;
+    private boolean canPublishFreeCopy;
+    private String editMode;
 
     public boolean isDonut() {
         return isDonut;
