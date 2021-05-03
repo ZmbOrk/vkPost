@@ -3,54 +3,69 @@ package ru.netology.domain;
 import java.util.Date;
 
 public class CommentsOnPost {
-    private int idComment;
-    private int idOwner;
-    private String nameOwner;
-    private String iconOwnerUrl;
-    private Date dateComment;
-    private String textComment;
-    private int countComment;
 
-    public int getIdComment() {
-        return idComment;
+    private int count;
+    private int canPost;
+    private int groupsCanPost;
+    private boolean canClose;
+    private boolean canOpen;
+    private Date dateComment;
+    private int likesComment;
+
+
+    public int getCount() {
+        return count;
     }
-    public void setIdComment () {
-        this.idComment = idComment;
+
+    public void setCount(int count) {
+        this.count = count;
     }
-    public int getIdOwner() {
-        return idOwner;
+
+    public int getCanPost() {
+        return canPost;
     }
-    public void setIdOwner (){
-        this.idOwner = idOwner;
+
+    public void setCanPost(int canPost) {
+        this.canPost = canPost;
     }
-    public String getNameOwner() {
-        return nameOwner;
+
+    public int getGroupsCanPost() {
+        return groupsCanPost;
     }
-    public void setNameOwner () {
-        this.nameOwner = nameOwner;
+
+    public void setGroupsCanPost(int groupsCanPost) {
+        this.groupsCanPost = groupsCanPost;
     }
-    public String getIconOwnerUrl() {
-        return iconOwnerUrl;
+
+    public boolean isCanClose() {
+        return canClose;
     }
-    public void setIconOwnerUrl(String iconOwnerUrl) {
-        this.iconOwnerUrl = iconOwnerUrl;
+
+    public void setCanClose(boolean canClose) {
+        this.canClose = canClose;
     }
+
+    public boolean isCanOpen() {
+        return canOpen;
+    }
+
+    public void setCanOpen(boolean canOpen) {
+        this.canOpen = canOpen;
+    }
+
     public Date getDateComment() {
         return dateComment;
     }
+
     public void setDateComment(Date dateComment) {
         this.dateComment = dateComment;
     }
-    public String getTextComment() {
-        return textComment;
+
+    public int getLikesComment() {
+        return likesComment;
     }
-    public void setTextComment(String textComment) {
-        this.textComment = textComment;
-    }
-    public int getCountComment() {
-        return countComment;
-    }
-    public void setCountComment(int countComment) {
-        this.countComment = countComment;
+
+    public void setLikesComment(int likesComment) {
+        this.likesComment = likesComment;
     }
 }

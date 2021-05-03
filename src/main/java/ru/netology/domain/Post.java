@@ -31,7 +31,62 @@ public class Post {
     private boolean isPostPin;
     private boolean canPostUnpin;
     private boolean markedAsAds;
+
+    private AttachemntsPost attachemntsPost;
+    private CommentsOnPost commentsOnPost;
+    private GeolocatinPost geolocatinPost;
+    private LikesPost likesPost;
+    private RepostsPost repostsPost;
+    private SourcePost sourcePost;
     private Donut donut;
+
+    public AttachemntsPost getAttachemntsPost() {
+        return attachemntsPost;
+    }
+
+    public void setAttachemntsPost(AttachemntsPost attachemntsPost) {
+        this.attachemntsPost = attachemntsPost;
+    }
+
+    public CommentsOnPost getCommentsOnPost() {
+        return commentsOnPost;
+    }
+
+    public void setCommentsOnPost(CommentsOnPost commentsOnPost) {
+        this.commentsOnPost = commentsOnPost;
+    }
+
+    public GeolocatinPost getGeolocatinPost() {
+        return geolocatinPost;
+    }
+
+    public void setGeolocatinPost(GeolocatinPost geolocatinPost) {
+        this.geolocatinPost = geolocatinPost;
+    }
+
+    public LikesPost getLikesPost() {
+        return likesPost;
+    }
+
+    public void setLikesPost(LikesPost likesPost) {
+        this.likesPost = likesPost;
+    }
+
+    public RepostsPost getRepostsPost() {
+        return repostsPost;
+    }
+
+    public void setRepostsPost(RepostsPost repostsPost) {
+        this.repostsPost = repostsPost;
+    }
+
+    public SourcePost getSourcePost() {
+        return sourcePost;
+    }
+
+    public void setSourcePost(SourcePost sourcePost) {
+        this.sourcePost = sourcePost;
+    }
 
     public int getIdAccountPage() {
         return idAccountPage;
